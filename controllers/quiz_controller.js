@@ -8,10 +8,17 @@ exports.load = function(req, res, next, quizId){
 				req.quiz = quiz;
 				next();
 			} else  {
+<<<<<<< HEAD
 				next(new Error('No existe quizId=' + quizId))
 			}
 		}
 	).catch(function(error) { next(error)});
+=======
+				next(new Error('No existe quizId=' + quizId));
+			}
+		}
+	).catch(function(error) { next(error); });
+>>>>>>> 2b79af06844b59e7c4a7cf4a8d2dcea5fc160118
 };
 
 
@@ -25,15 +32,24 @@ exports.index = function(req, res) {
 		}).catch(function(error){ next(error); })
 	} else {
 		models.Quiz.findAll().then(function(quizes) {
+<<<<<<< HEAD
 			res.render('quizes/index.ejs', {quizes: quizes, errors: []});
 		}).catch(function(error) { next(error)});
+=======
+			res.render('quizes/index', {quizes: quizes});
+		}).catch(function(error) { next(error); })
+>>>>>>> 2b79af06844b59e7c4a7cf4a8d2dcea5fc160118
 	}
 	
 };
 
 // GET /quizes/:id
 exports.show = function(req, res) {
+<<<<<<< HEAD
 	res.render('quizes/show', {quiz: req.quiz, errors: []});
+=======
+	res.render('quizes/show', {quiz: req.quiz});
+>>>>>>> 2b79af06844b59e7c4a7cf4a8d2dcea5fc160118
 };
 
 // GET /quizes/:id/answer
@@ -42,6 +58,7 @@ exports.answer = function(req, res) {
 	if (req.query.respuesta === req.quiz.respuesta){
 		resultado = 'Correcto'
 	}
+<<<<<<< HEAD
 	res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado, errors: []});
 };
 exports.author = function(req, res) {
@@ -111,3 +128,10 @@ exports.destroy = function (req, res) {
 		res.redirect('/quizes');
 	}).catch(function(error){next(error)});
 };
+=======
+	res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado});
+};
+exports.author = function(req, res) {
+	res.render('quizes/author', {autores: 'Autores de la práctica'})
+};
+>>>>>>> 2b79af06844b59e7c4a7cf4a8d2dcea5fc160118

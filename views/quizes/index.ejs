@@ -5,6 +5,7 @@
 
 <table>
 <% var i; for(i=0; i<quizes.length; i++) { %>
+<<<<<<< HEAD
 	<tr>
 		<td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td>
 		<td><a href="quizes/<%= quizes[i].id %>/edit"><button>Editar</button></a><td>
@@ -18,4 +19,9 @@
 </table>
 <p>
 <a href="/quizes/new"><button type="button">Crear pregunta</button></a>
+=======
+	<tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>
+<% } %>
+</table>
+>>>>>>> 2b79af06844b59e7c4a7cf4a8d2dcea5fc160118
 
