@@ -9,14 +9,21 @@
     "node": "0.12.3",
     "npm": "2.9.1"
   },
+  "devDepencies": {
+    "sqlite3": "^3.0.8"
+  },
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "cookie-parser": "^1.4.4",
-    "debug": "^4.1.1",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "debug": "*",
+    "ejs": "*",
+    "express": "*",
     "express-partials": "*",
-    "morgan": "^1.9.1",
-    "serve-favicon": "^2.5.0"
+    "method-override": "^3.0.0",
+    "morgan": "*",
+    "pg": "^7.9.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^5.2.8",
+    "serve-favicon": "*"
   }
 }
